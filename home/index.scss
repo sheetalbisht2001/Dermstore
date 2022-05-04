@@ -149,3 +149,33 @@ section.mid {
     }
   }
 }
+
+section.end {
+  width: 80%;
+  margin: 1rem auto;
+
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
+
+  display: flex;
+
+  > div {
+    width: 50%;
+  }
+
+  > .left {
+
+    img {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  > .right {
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+}
