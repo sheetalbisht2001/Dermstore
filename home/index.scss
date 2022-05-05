@@ -1,3 +1,113 @@
+section {
+  width: 80%;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
+
+  > .wrapper {
+    .left-arrow,
+    .right-arrow {
+      position: absolute;
+      cursor: pointer;
+      user-select: none;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: #eee;
+      padding: 10px;
+      z-index: 19;
+    }
+
+    .left-arrow {
+      top: 50%;
+    }
+
+    .right-arrow {
+      top: 50%;
+      right: 0;
+    }
+  }
+}
+
+section.now-trending {
+  position: relative;
+
+  h3 {
+    text-align: center;
+  }
+
+  > .wrapper::-webkit-scrollbar {
+    display: block; // TODO: change to none
+  }
+
+  > .wrapper {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    > .card:hover {
+      p {
+        text-decoration: none;
+      }
+    }
+
+    > .card {
+      margin-right: 1rem;
+      margin-left: 1rem;
+      min-width: 350px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+section.best-sellers {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  > .wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  > .wrapper {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    > .card {
+      min-width: 250px;
+      text-align: center;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      > img {
+        width: 100%;
+      }
+
+      > button {
+        width: 100%;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
 section.mid {
   padding-top: 1rem;
   border-top: 1px solid #999;
@@ -6,7 +116,6 @@ section.mid {
   margin-top: 1rem;
 
   > div {
-    width: 80%;
     margin: 1rem auto;
 
     @media screen and (max-width: 1200px) {
@@ -165,7 +274,6 @@ section.end {
   }
 
   > .left {
-
     img {
       width: 100px;
       margin-bottom: 1rem;
@@ -177,5 +285,4 @@ section.end {
       margin-bottom: 1rem;
     }
   }
-
 }
