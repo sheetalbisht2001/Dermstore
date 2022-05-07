@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Add To Cart</title>
+
+
+</head>
+
+<body>
+
+    <hr>
+    <div id="id1">
+        <div id="item">
+            <h1>item</h1>
+        </div>
+        <div id="id2">
+
+            <h1>price</h1>
+            <h1>quantity</h1>
+            <h1>subtotal</h1>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="main"></div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    var data = JSON.parse(localStorage.getItem("main")) || []
+        // console.log(data)4
+
+    // data[1].quantity = 1
+    // localStorage.setItem('main', JSON.stringify(data))
+
+
+    data.forEach(function(elem, index) {
+        var count;
+        if (localStorage.getItem("cc") == null) {
+
+            count = 1
+        } else {
+            count = localStorage.getItem("cc")
+        }
+
+        // var box = document.createElement("div")
+        var main = document.querySelector("#main")
+        var maindiv = document.createElement("div")
+        var div1 = document.createElement("div")
+        var img1 = document.createElement("img")
+        img1.setAttribute("src", elem.image)
+        var div = document.createElement("div")
+        div.setAttribute("id", "hp")
+        var h1 = document.createElement("h1")
+        h1.innerText = elem.hdesc
+
+        var h2 = document.createElement("h1")
+        h2.innerText = elem.para
+
+        div.append(h1, h2)
+        div1.append(img1, div)
+        var div2 = document.createElement("div")
+        var div3 = document.createElement("div")
+        div3.setAttribute("id", "idpara")
+        var p1 = document.createElement("p")
+
+        p1.innerText = "$" + (elem.price * elem.quantity)
+
+        div3.append(p1)
+        var div4 = document.createElement("div")
+        div4.setAttribute("id", "quantity")
+
+        var decrea = document.createElement("button")
+        decrea.innerText = "-"
+        var qua = document.createElement("h3")
+        qua.innerText = elem.quantity
+
+        var increa = document.createElement("button")
+        increa.innerText = "+"
+        decrea.addEventListener("click", function() {
+            if (--elem.quantity < 1) {
+                elemq.quantity = 1
+            }
+            qua.innerText = elem.quantity
+            p1.innerText = "$" + (elem.price * elem.quantity)
+
+            p2.innerText = p1.innerText
+
+            localStorage.setItem("main", JSON.stringify(data))
+
+
+            window.location.reload();
+
+        });
+        increa.addEventListener("click", function() {
+            elem.quantity++
+                qua.innerText = elem.quantity
+            p1.innerText = "$" + (elem.price * elem.quantity)
+
+            // p1.innerText = elem.price * elem.quantity
+            p2.innerText = p1.innerText
+
+            localStorage.setItem("main", JSON.stringify(data))
+            window.location.reload();
+
+
+        });
+
+        div4.append(decrea, qua, increa)
+
+        var div5 = document.createElement("div")
+        div5.setAttribute("id", "subtot")
+        var p2 = document.createElement("p")
+        p2.innerText = "$" + (elem.price * elem.quantity)
+
+        div5.append(p2)
+        var div6 = document.createElement("div")
+        var btn = document.createElement("button")
+        btn.setAttribute("id", "cutt")
+        btn.innerText = "X"
+        btn.addEventListener("click", function() {
+            deleteit(elem, index)
+        })
+        div6.append(btn)
+        div2.append(div3, div4, div5, div6)
+        maindiv.append(div1, div2)
+
+
+
+        main.append(maindiv)
+        var favdiv = document.createElement("div")
+        favdiv.setAttribute("id", "favdiv")
+            // var heartbtn = document.createElement("div")
+        var heart = document.createElement("div")
+        heartp = document.createElement("p")
+        heartp.innerText = "♡" + " " + "Save To My Favorites"
+        heart.append(heartp)
+        var favh = document.createElement("h4")
+        favh.setAttribute("id", "favh")
+
+        // favh.innerText = 
+        favdiv.append(heart)
+        var hr = document.createElement("hr")
+        var br = document.createElement("br")
+        main.append(favdiv, br, hr)
+        document.querySelector("body").append(main)
+        localStorage.setItem("main", JSON.stringify(data))
+
+    });
+
+    // localStorage.setItem("cc", data)
+
+    function deleteit(elem, index) {
+
+        data.splice(index, 1)
+        localStorage.setItem("main", JSON.stringify(data))
+        window.location.reload();
+        // data.
+    }
+
+    // }
+</script>
