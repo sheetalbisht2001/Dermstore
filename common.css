@@ -25,3 +25,8 @@
 .btn-primary:hover {
   background-color: #606060;
 }
+
+ul li {
+  font-size: 40px;
+  margin: 1rem;
+}
