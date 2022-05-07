@@ -1,0 +1,221 @@
+html,
+body {
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+
+body {
+  /* background: #eee; */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* main header part */
+
+
+
+#main-header #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* height: auto; */
+}
+
+#main-header .swiper {
+  height: 40rem;
+  text-align: center;
+}
+
+#main-header .swiper img {
+  width: 100%;
+}
+
+#main-header .head {
+  font-size: 3.125rem;
+  margin-top: -25rem;
+  margin-left: 38rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-header body {
+    background-color: lightblue;
+  }
+}
+
+#main-header .head2 {
+  font-size: 3.125rem;
+  margin-top: -2.5rem;
+  margin-left: 40rem;
+}
+
+#main-header .para {
+  font-size: 1.313rem;
+  margin-top: -1.563rem;
+  margin-left: 35.938rem;
+}
+
+#main-header .para1 {
+  font-size: 1.313rem;
+  margin-top: -1.563rem;
+  margin-left: 39rem;
+}
+
+#main-header .para2 {
+  font-size: 1.313rem;
+  margin-top: -1.563rem;
+  margin-left: 34.563rem;
+}
+
+#main-header .button {
+  border: 0px;
+  font-size: 0.938rem;
+  padding: 0.875rem 2rem;
+  background-color: black;
+  color: white;
+  margin-left: 20.625rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+#main-header .button:hover {
+  background-color: gray;
+  color: white;
+}
+
+#main-header .button2 {
+  border: 0px;
+  font-size: 0.938rem;
+  padding: 0.875rem 2rem;
+  background-color: black;
+  color: white;
+  margin-left: 17.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+#main-header .button2:hover {
+  background-color: gray;
+  color: white;
+}
+
+#main-header .swiper-slide img {
+  width: 100%;
+}
+
+
+
+
+
+/* mid part  */
+
+#mid .swiper {
+  width: 100%;
+}
+
+#mid .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  margin-left: 7px;
+  margin-top: 10px;
+}
+
+#mid .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+#mid .head {
+  font-family: "poly Reguler", "'Times New Roman', Times, serif";
+  font-size: 33px;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+#mid .upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#mid .photo img {
+  height: 380px;
+}
+
+#mid .para1 {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#mid .para2 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: -8px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#mid .para3 {
+  text-align: center;
+  font-size: 18px;
+  margin-top: -10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+
+
+/* blog part */
+
+
+#blog-part .swiper {
+  width: 100%;
+  height: 100%;    
+}
+
+
+#blog-part   .swiper-slide {
+  text-align: center;
+  font-size: 17px;
+  background: #fff;
+  margin-left: 7px;
+}
+
+#blog-part  .swiper-slide img {
+  display: block;
+  width: 100%;
+  /* width: 500px; */
+  height: 250px;
+  /* height: 100%; */
+  object-fit: cover;
+}
+#blog-part   .head {
+  font-family: "poly Reguler","'Times New Roman', Times, serif";
+      font-size: 33px;
+      text-align: center;
+      color: #000;
+      font-weight:500;
+      line-height: 32px;
+}
